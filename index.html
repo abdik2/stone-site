@@ -3,25 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Ой-ой-ой 😏</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 40px;
+        }
+        .big-button {
+            font-size: 30px;
+            padding: 20px 40px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .big-button:hover {
+            background-color: darkred;
+        }
+        audio {
+            display: none; /* Скрываем стандартный плеер */
+        }
+    </style>
 </head>
 <body>
     <h1>Сюрприз! 🔥</h1>
 
-    <audio id="myAudio" controls autoplay>
+    <button class="big-button" onclick="playSound()">🔊 Включить звук</button>
+
+    <audio id="myAudio">
         <source src="https://files.catbox.moe/12fv91.mp3" type="audio/mpeg">
         Ваш браузер не поддерживает аудиоэлемент.
     </audio>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        function playSound() {
             let audio = document.getElementById("myAudio");
-            audio.volume = 1.0;
-
-            // Если браузер блокирует автоплеи, ждем клика
-            document.addEventListener("click", function () {
-                audio.play();
-            });
-        });
+            audio.volume = 1.0;  // Автоматически ставим 100% громкость
+            audio.play();
+        }
     </script>
 
 </body>
