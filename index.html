@@ -8,7 +8,7 @@
     <h1>Сюрприз! 🔥</h1>
 
     <audio id="myAudio" controls autoplay>
-        <source src="https://voca.ro/1nyC9DM3Z0yC" type="audio/mpeg">
+        <source src="https://files.catbox.moe/12fv91.mp3" type="audio/mpeg">
         Ваш браузер не поддерживает аудиоэлемент.
     </audio>
 
@@ -17,7 +17,7 @@
             let audio = document.getElementById("myAudio");
             audio.volume = 1.0;
 
-            // Если браузер не позволяет автоплеи, ждем клика
+            // Если браузер блокирует автоплеи, ждем клика
             document.addEventListener("click", function () {
                 audio.play();
             });
