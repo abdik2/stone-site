@@ -3,19 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Ой-ой-ой 😏</title>
-    <script>
-        function playSound() {
-            let audio = new Audio("https://voca.ro/1nyC9DM3Z0yC"); 
-            audio.volume = 1.0;
-            audio.muted = false;
-            setTimeout(() => {
-                audio.play();
-            }, 500);
-        }
-        document.addEventListener("click", playSound);
-    </script>
 </head>
 <body>
     <h1>Сюрприз! 🔥</h1>
+
+    <audio id="myAudio" controls autoplay>
+        <source src="https://voca.ro/1nyC9DM3Z0yC" type="audio/mpeg">
+        Ваш браузер не поддерживает аудиоэлемент.
+    </audio>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let audio = document.getElementById("myAudio");
+            audio.volume = 1.0;
+
+            // Если браузер не позволяет автоплеи, ждем клика
+            document.addEventListener("click", function () {
+                audio.play();
+            });
+        });
+    </script>
+
 </body>
 </html>
