@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Ой-ой-ой 😏</title>
-    <script>
-        window.onload = function() {
-            let audio = new Audio("https://drive.google.com/uc?export=download&id=1pHLgZLICm9zCw_Lxx18ttZD3VTa96wvQ"); 
-            audio.volume = 1.0;
-            audio.play();
-        };
-    </script>
 </head>
 <body>
     <h1>Сюрприз! 🔥</h1>
+    <button onclick="playSound()">🔊 Включить звук</button>
+
+    <script>
+        function playSound() {
+            let audio = new Audio("https://drive.google.com/uc?export=download&id=1pHLgZLICm9zCw_Lxx18ttZD3VTa96wvQ"); 
+            audio.volume = 1.0;
+            audio.play();
+        }
+    </script>
 </body>
 </html>
-ы
+
